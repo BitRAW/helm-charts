@@ -3,6 +3,16 @@ entries:
   uptime-kuma:
   - apiVersion: v2
     appVersion: 1.8.0
+    created: "2021-10-15T06:53:44.353968385Z"
+    description: uptime kuma helm chart
+    digest: 40d3726f3b96ef287fffd899677eec1b661f680f6bf7e2062d7bfe1f08b09e45
+    name: uptime-kuma
+    type: application
+    urls:
+    - https://github.com/lackrobin/uptime-kuma-helm/releases/download/uptime-kuma-2.0.3/uptime-kuma-2.0.3.tgz
+    version: 2.0.3
+  - apiVersion: v2
+    appVersion: 1.8.0
     created: "2021-10-15T06:50:01.132639806Z"
     description: uptime kuma helm chart
     digest: 50f7f3a4fd15538cbad45561f767572aed78b7543b62aff1882b76c1cf3afdfe
@@ -51,4 +61,4 @@ entries:
     urls:
     - charts/uptime-kuma-1.2.0.tgz
     version: 1.2.0
-generated: "2021-10-15T06:50:01.132657507Z"
+generated: "2021-10-15T06:53:44.355246127Z"
