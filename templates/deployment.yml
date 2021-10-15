@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Values.app.name }}
+  name: deployment
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}
+    spec:
+      containers:
+        - name: {{ .Values.app.name }}
+          image: {{ .Values.image.name }}
+          ports:
+            - containerPort: {{ .Values.service.port }}
+          volumeMounts:
+            - mountPath: /app/data
+              name: storage
+          livenessProbe:
+            exec:
+              command:
+                - node
+                - extra/healthcheck.js
+            initialDelaySeconds: 180
+            periodSeconds: 60
+            timeoutSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3001
+              scheme: HTTP
+
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: {{ .Values.app.name }}-pvc
