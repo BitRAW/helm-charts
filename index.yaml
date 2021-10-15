@@ -3,22 +3,12 @@ entries:
   uptime-kuma:
   - apiVersion: v2
     appVersion: 1.8.0
-    created: "2021-10-15T14:34:29.2877498+09:00"
+    created: "2021-10-15T14:37:19.7335279+09:00"
     description: uptime kuma helm chart
-    digest: 18c5e0ccb26f6030e503533dc66c99530000baf785c9a32e4cbcd23e34df5be5
+    digest: dbd12b989ed1641882d55d688ffe95069a995998cbc86ff6cd0a20abee760a2b
     name: uptime-kuma
     type: application
     urls:
-    - charts/uptime-kuma-1.2.1.tgz
-    version: 1.2.1
-  - apiVersion: v2
-    appVersion: 1.8.0
-    created: "2021-10-15T14:34:29.2865685+09:00"
-    description: uptime kuma helm chart
-    digest: 2e6791230cfc7768279f97e9ef00d5ee614ab8204ae16a03750247af6e8a1587
-    name: uptime-kuma
-    type: application
-    urls:
-    - charts/uptime-kuma-1.2.0.tgz
-    version: 1.2.0
-generated: "2021-10-15T14:34:29.2852743+09:00"
+    - charts/uptime-kuma-2.0.0.tgz
+    version: 2.0.0
+generated: "2021-10-15T14:37:19.7321528+09:00"
