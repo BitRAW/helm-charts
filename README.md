@@ -10,7 +10,7 @@ Helm's [documentation](https://helm.sh/docs) to get started.
 Once Helm has been set up correctly, add the repo as follows:
 
 ```
-helm repo add sakamot0 https://sakamot0.com/uptime-kuma-helm/
+helm repo add lackrobin https://lackrobin.github.io/uptime-kuma-helm/
 ```
 
 If you had already added this repo earlier, run `helm repo update` to retrieve
