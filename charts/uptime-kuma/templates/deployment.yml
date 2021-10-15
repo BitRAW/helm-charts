@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: {{ .Values.app.name }}
-  name: deployment
+  name: {{ .Values.app.name }}
 spec:
   selector:
     matchLabels:
