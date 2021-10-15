@@ -1,5 +1,7 @@
 # uptime-kuma-helm
 
+Helm chart for installing uptime kuma in kubernetes
+
 ## Usage
 
 [Helm](https://helm.sh) must be installed to use the charts.  Please refer to
