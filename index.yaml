@@ -14,6 +14,16 @@ entries:
   bitraw-bots:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2021-12-02T10:55:10.94064141Z"
+    description: trade bots for the bitraw exchange
+    digest: ba3a37e519040554b5456db3797a62dcdd471d6c836acff22b78fe6625fed36c
+    name: bitraw-bots
+    type: application
+    urls:
+    - https://github.com/BitRAW/helm-charts/releases/download/bitraw-bots-0.1.1/bitraw-bots-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2021-12-02T10:39:00.597334671Z"
     description: trade bots for the bitraw exchange
     digest: 1cb87425d6c4c6667f2a03ce0793b6fe0daee91c086740ee5773fa5caa4f8a67
@@ -163,4 +173,4 @@ entries:
     urls:
     - charts/uptime-kuma-1.2.0.tgz
     version: 1.2.0
-generated: "2021-12-02T10:39:00.597386071Z"
+generated: "2021-12-02T10:55:10.940888811Z"
