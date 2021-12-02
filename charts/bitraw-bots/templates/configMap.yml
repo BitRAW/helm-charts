@@ -6,3 +6,4 @@ metadata:
 data:
  {{ .Values.config.userNameField }}: {{ .Values.config.userName }}
  {{ .Values.config.user2NameField }}: {{ .Values.config.user2Name }}
+ {{ .Values.config.grpcHostnameField }}: {{ .Values.config.grpcHostname }}
