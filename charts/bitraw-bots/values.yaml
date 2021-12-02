@@ -3,7 +3,7 @@ app:
   name: bitraw-bots
 
 image:
-  name: lackrobin/bitraw-bots
+  name: lackrobin/bitraw-bots:latest
   pullPolicy: IfNotPresent
 
 config:
