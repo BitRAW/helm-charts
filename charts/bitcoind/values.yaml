@@ -1,0 +1,40 @@
+
+app:
+  name: bitcoind
+
+image:
+  name: kylemanna/bitcoind
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 8333
+  targetPort: 8333
+  rpcPort: 8332
+  rpcTargetPort: 8332
+  
+
+ingress:
+  host: btc.bitraw.io
+
+storage:
+  size: 500Gi
+
+config:
+  btcConfigMap: bitraw-btc-node-conf
+  rpcUser: BTC_RPCUSER
+  rpcUserName: user
+
+resources: {}
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+  #  cpu: 100m
+  #  memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

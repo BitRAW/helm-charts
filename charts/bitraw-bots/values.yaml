@@ -1,0 +1,30 @@
+
+app:
+  name: bitcoind
+
+image:
+  name: lackrobin/bitraw-bots
+  pullPolicy: IfNotPresent
+
+config:
+  ConfigMapName: bitraw-bot-conf
+  UserNameField: KC_USER1_NAME
+  userName: nobody@devnull.com
+  UserPasswordField: KC_USER1_PASSWORD
+  User2NameField: KC_USER2_NAME
+  user2Name: void@devnull.com
+  User2PasswordField: KC_USER2_PASSWORD
+
+resources: {}
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+  #  cpu: 100m
+  #  memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

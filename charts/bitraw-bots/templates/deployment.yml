@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Values.app.name }}
+  name: {{ .Values.app.name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}
+    spec:
+      containers:
+        - name: {{ .Values.app.name }}
+          image: {{ .Values.image.name }}
+          env: 
+            - name: KC_USER1_NAME
+              valueFrom:
+                configMapKeyRef:
+                  key: {{ .Values.config.UserNameField }}
+                  name: {{ .Values.config.ConfigMapName }}
+            - name: KC_USER1_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: {{ .Values.config.UserPasswordField }}
+                  name: bitraw-bot-secret
+          ports:
+            - containerPort: {{ .Values.service.port }}

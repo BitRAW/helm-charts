@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+meta:
+ name:  {{ .Values.config.btcConfigMap }}
+ namespace: default
+data:
+ {{ .Values.config.rpcUser }}: {{ .Values.config.rpcUserName }}
