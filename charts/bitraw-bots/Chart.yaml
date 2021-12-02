@@ -1,6 +1,6 @@
 apiVersion: v2
-name: bitcoind
-description: bitcoind node
+name: bitraw-bots
+description: trade bots for the bitraw exchange
 type: application
 version: 0.0.1
-appVersion: "v22.0"
+appVersion: "0.0.1"
