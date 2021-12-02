@@ -29,7 +29,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   key: {{ .Values.config.kcClientNameField }}
-                  name: {{ .Values.config.kcClientName }}
+                  name: {{ .Values.config.configMapName }}
             - name: {{ .Values.config.grpcHostnameField }}
               valueFrom:
                 configMapKeyRef:
