@@ -25,23 +25,33 @@ spec:
                 configMapKeyRef:
                   key: {{ .Values.config.userNameField }}
                   name: {{ .Values.config.configMapName }}
+            - name: {{ .Values.config.kcClientNameField }}
+              valueFrom:
+                configMapKeyRef:
+                  key: {{ .Values.config.kcClientNameField }}
+                  name: {{ .Values.config.kcClientName }}
             - name: {{ .Values.config.grpcHostnameField }}
               valueFrom:
                 configMapKeyRef:
                   key: {{ .Values.config.grpcHostnameField }}
                   name: {{ .Values.config.configMapName }}
-            - name: {{ .Values.config.userPasswordField }}
-              valueFrom:
-                secretKeyRef:
-                  key: {{ .Values.config.userPasswordField }}
-                  name: bitraw-bot-secret
             - name:  {{ .Values.config.user2NameField }}
               valueFrom:
                 configMapKeyRef:
                   key: {{ .Values.config.user2NameField }}
                   name: {{ .Values.config.configMapName }}
+            - name: {{ .Values.config.userPasswordField }}
+              valueFrom:
+                secretKeyRef:
+                  key: {{ .Values.config.userPasswordField }}
+                  name: {{ .Values.config.secretName }}
             - name: {{ .Values.config.user2PasswordField }}
               valueFrom:
                 secretKeyRef:
                   key: {{ .Values.config.user2PasswordField }}
-                  name: bitraw-bot-secret
+                  name: {{ .Values.config.secretName }}
+            - name: {{ .Values.config.kcClientSecretField }}
+              valueFrom:
+                secretKeyRef:
+                  key: {{ .Values.config.kcClientSecretField }}
+                  name: {{ .Values.config.kcClientSecretName }}

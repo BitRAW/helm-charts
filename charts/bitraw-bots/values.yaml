@@ -8,6 +8,8 @@ image:
 
 config:
   configMapName: bitraw-bot-conf
+  secretName: bitraw-bot-secret
+  kcClientSecretName: bitraw-bot-kc-client-secret
   userNameField: KC_USER1_NAME
   userName: nobody@devnull.com
   userPasswordField: KC_USER1_PASSWORD
@@ -16,6 +18,9 @@ config:
   user2PasswordField: KC_USER2_PASSWORD  
   grpcHostnameField: GRPC_SERVER
   grpcHostname: dingir-matchengine:50051
+  kcClientNameField: KC_CLIENT_ID
+  kcClientName: typescript-testsuite
+  kcClientSecretField: KC_CLIENT_SECRET
 
 resources: {}
   # limits:
