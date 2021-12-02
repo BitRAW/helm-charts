@@ -35,9 +35,6 @@ spec:
           volumeMounts:
             - mountPath: /bitcoin/.bitcoin
               name: storage
-            initialDelaySeconds: 180
-            periodSeconds: 60
-            timeoutSeconds: 30
       volumes:
         - name: storage
           persistentVolumeClaim:
