@@ -22,7 +22,9 @@ storage:
 
 config:
   btcConfigMap: bitraw-btc-node-conf
-  rpcUser: BTC_RPCUSER
+  rpcPWSecret: bitcoin-rpc-pw-secret
+  rpcUser: RPCUSER
+  rpcPW: RPCPASSWORD
   rpcUserName: user
 
 resources: {}
