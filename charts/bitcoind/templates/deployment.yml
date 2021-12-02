@@ -32,6 +32,7 @@ spec:
                   name: {{ .Values.config.rpcPWSecret }}
           ports:
             - containerPort: {{ .Values.service.port }}
+            - containerPort: {{ .Values.service.rpcPort }}
           volumeMounts:
             - mountPath: /bitcoin/.bitcoin
               name: storage
