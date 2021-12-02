@@ -7,13 +7,13 @@ image:
   pullPolicy: IfNotPresent
 
 config:
-  ConfigMapName: bitraw-bot-conf
-  UserNameField: KC_USER1_NAME
+  configMapName: bitraw-bot-conf
+  userNameField: KC_USER1_NAME
   userName: nobody@devnull.com
-  UserPasswordField: KC_USER1_PASSWORD
-  User2NameField: KC_USER2_NAME
+  userPasswordField: KC_USER1_PASSWORD
+  user2NameField: KC_USER2_NAME
   user2Name: void@devnull.com
-  User2PasswordField: KC_USER2_PASSWORD
+  user2PasswordField: KC_USER2_PASSWORD
 
 resources: {}
   # limits:

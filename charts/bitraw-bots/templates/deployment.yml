@@ -23,10 +23,20 @@ spec:
             - name: KC_USER1_NAME
               valueFrom:
                 configMapKeyRef:
-                  key: {{ .Values.config.UserNameField }}
-                  name: {{ .Values.config.ConfigMapName }}
+                  key: {{ .Values.config.userNameField }}
+                  name: {{ .Values.config.configMapName }}
             - name: KC_USER1_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  key: {{ .Values.config.UserPasswordField }}
+                  key: {{ .Values.config.userPasswordField }}
+                  name: bitraw-bot-secret
+            - name: KC_USER2_NAME
+              valueFrom:
+                configMapKeyRef:
+                  key: {{ .Values.config.user2NameField }}
+                  name: {{ .Values.config.configMapName }}
+            - name: KC_USER2_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: {{ .Values.config.user2PasswordField }}
                   name: bitraw-bot-secret
