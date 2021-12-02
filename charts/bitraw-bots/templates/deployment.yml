@@ -20,22 +20,27 @@ spec:
         - name: {{ .Values.app.name }}
           image: {{ .Values.image.name }}
           env: 
-            - name: KC_USER1_NAME
+            - name: {{ .Values.config.userNameField }}
               valueFrom:
                 configMapKeyRef:
                   key: {{ .Values.config.userNameField }}
                   name: {{ .Values.config.configMapName }}
-            - name: KC_USER1_PASSWORD
+            - name: {{ .Values.config.grpcHostnameField }}
+              valueFrom:
+                configMapKeyRef:
+                  key: {{ .Values.config.grpcHostnameField }}
+                  name: {{ .Values.config.configMapName }}
+            - name: {{ .Values.config.userPasswordField }}
               valueFrom:
                 secretKeyRef:
                   key: {{ .Values.config.userPasswordField }}
                   name: bitraw-bot-secret
-            - name: KC_USER2_NAME
+            - name:  {{ .Values.config.user2NameField }}
               valueFrom:
                 configMapKeyRef:
                   key: {{ .Values.config.user2NameField }}
                   name: {{ .Values.config.configMapName }}
-            - name: KC_USER2_PASSWORD
+            - name: {{ .Values.config.user2PasswordField }}
               valueFrom:
                 secretKeyRef:
                   key: {{ .Values.config.user2PasswordField }}

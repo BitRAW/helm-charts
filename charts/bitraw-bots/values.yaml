@@ -1,6 +1,6 @@
 
 app:
-  name: bitcoind
+  name: bitraw-bots
 
 image:
   name: lackrobin/bitraw-bots
@@ -13,7 +13,9 @@ config:
   userPasswordField: KC_USER1_PASSWORD
   user2NameField: KC_USER2_NAME
   user2Name: void@devnull.com
-  user2PasswordField: KC_USER2_PASSWORD
+  user2PasswordField: KC_USER2_PASSWORD  
+  grpcHostnameField: GRPC_SERVER
+  grpcHostname: dingir-matchengine:50051
 
 resources: {}
   # limits:
