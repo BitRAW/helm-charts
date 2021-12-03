@@ -27,13 +27,13 @@ config:
   rpcPW: RPCPASSWORD
   rpcUserName: user
 
-resources: {}
-  # limits:
-  #  cpu: 100m
-  #  memory: 128Mi
-  # requests:
-  #  cpu: 100m
-  #  memory: 128Mi
+resources:
+  requests:
+    cpu: 200m
+    memory: 1Gi
+  limits:
+    cpu: 500m
+    memory: 1536Mi
 
 nodeSelector: {}
 
