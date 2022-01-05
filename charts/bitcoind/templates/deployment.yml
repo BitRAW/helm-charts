@@ -33,6 +33,7 @@ spec:
             - mountPath: /bitcoin/.bitcoin
               name: storage
             - mountPath: /bitcoin/.bitcoin/bitcoin.conf
+              subPath: bitcoin.conf
               name: bitcoin-config
       volumes:
         - name: storage
@@ -41,3 +42,6 @@ spec:
         - name: bitcoin-config
           configMap:
             name: {{ .Values.config.btcConfigMap }}
+            items:
+              - key: bitcoin.conf  
+                path: bitcoin.conf 
