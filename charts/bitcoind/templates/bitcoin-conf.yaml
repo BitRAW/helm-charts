@@ -5,5 +5,18 @@ metadata:
  namespace: default
 data:
   bitcoin.conf: |
+    [core]
+    blocksonly=1 # Only download and relay blocks - ignore unconfirmed transaction. This also means we don't have a mempool ourselves (safes memory).
+    minimumchainwork=0x000000000000000000000000000000000000000000f91c579d57cad4bc5278dc
+    dbcache=1000
+
     [network]
+    externalip=btc.bitraw.io
     listen=1
+    maxconnections=60
+    maxuploadtarget=100 # maximum upload = 100 MB / day
+
+    [wallet]
+    # Do not load the wallet and disable wallet RPC calls.
+    disablewallet=1
+
