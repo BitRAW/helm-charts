@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
- name:  bitocin-default-conf
+ name:  bitcoin-default-conf
  namespace: default
 data:
   bitcoin.conf: |
