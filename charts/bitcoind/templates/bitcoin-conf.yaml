@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name:  bitocin-default-conf
+ namespace: default
+data:
+  bitcoin.conf: |
+    [network]
+    listen=1

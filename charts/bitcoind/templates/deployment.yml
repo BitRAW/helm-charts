@@ -26,24 +26,18 @@ spec:
             limits:
               cpu: {{ .Values.resources.limits.cpu }}
               memory: {{ .Values.resources.limits.memory }}
-          env: 
-            - name: {{ .Values.config.rpcUser }}
-              valueFrom:
-                configMapKeyRef:
-                  key: {{ .Values.config.rpcUser }}
-                  name: {{ .Values.config.btcConfigMap }}
-            - name: {{ .Values.config.rpcPW }}
-              valueFrom:
-                secretKeyRef:
-                  key: {{ .Values.config.rpcPW }}
-                  name: {{ .Values.config.rpcPWSecret }}
           ports:
             - containerPort: {{ .Values.service.port }}
             - containerPort: {{ .Values.service.rpcPort }}
           volumeMounts:
             - mountPath: /bitcoin/.bitcoin
               name: storage
+            - mountPath: /bitcoin/.bitcoin/bitcoin.conf
+              name: bitcoin-config
       volumes:
         - name: storage
           persistentVolumeClaim:
             claimName: {{ .Values.app.name }}-pvc
+        - name: bitcoin-config
+          configMap:
+            name: {{ .Values.config.btcConfigMap }}

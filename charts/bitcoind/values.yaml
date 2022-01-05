@@ -21,11 +21,7 @@ storage:
   size: 500Gi
 
 config:
-  btcConfigMap: bitraw-btc-node-conf
-  rpcPWSecret: bitcoin-rpc-pw-secret
-  rpcUser: RPCUSER
-  rpcPW: RPCPASSWORD
-  rpcUserName: user
+  btcConfigMap: bitcoin-default-conf
 
 resources:
   requests:
@@ -33,7 +29,7 @@ resources:
     memory: 1Gi
   limits:
     cpu: 500m
-    memory: 1536Mi
+    memory: 2Gi
 
 nodeSelector: {}
 
