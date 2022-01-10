@@ -3,7 +3,7 @@ app:
   name: bitcoind
 
 image:
-  name: kylemanna/bitcoind
+  name: ruimarinho/bitcoin-core
   pullPolicy: IfNotPresent
 
 service:
