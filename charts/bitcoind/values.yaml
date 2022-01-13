@@ -31,6 +31,9 @@ resources:
     cpu: 500m
     memory: 2Gi
 
+# arguments:
+# - blocksonly
+
 nodeSelector: {}
 
 tolerations: []

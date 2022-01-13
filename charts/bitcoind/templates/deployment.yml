@@ -21,6 +21,11 @@ spec:
           image: {{ .Values.image.name }}
           args:
             - -printtoconsole
+            - -dbcache=500
+            - -maxconnections=60
+            - -maxuploadtarget=1000
+            - -blocksonly
+            - -disablewallet
           resources:
             requests:
               cpu: {{ .Values.resources.requests.cpu }}
