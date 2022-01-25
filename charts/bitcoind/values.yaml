@@ -20,9 +20,6 @@ ingress:
 storage:
   size: 500Gi
 
-config:
-  btcConfigMap: bitcoin-default-conf
-
 resources:
   requests:
     cpu: 200m
