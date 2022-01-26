@@ -29,8 +29,10 @@ spec:
             - -server
             - -listen
             - -rpcbind=127.0.0.1
-            - -rpcallowip=127.0.0.1
-            - -rpcauth=commodity_manager:ce2f62c4d5caeb71fac604efa4fcc472$ae97fbf4b95e93522414bab58b1b61c811675f10c9ee1b58b8f3b36fecaabc2b
+            - -rpcallowip=0.0.0.0/0
+            - -rpcuser=test
+            - -rpcpassword
+           # - -rpcauth=commodity_manager:ce2f62c4d5caeb71fac604efa4fcc472$ae97fbf4b95e93522414bab58b1b61c811675f10c9ee1b58b8f3b36fecaabc2b
           resources:
             requests:
               cpu: {{ .Values.resources.requests.cpu }}
