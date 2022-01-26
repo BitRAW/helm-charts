@@ -2,5 +2,5 @@ apiVersion: v2
 name: bitcoind
 description: bitcoind node
 type: application
-version: 0.2.6
+version: 0.2.7
 appVersion: "v22.0"

@@ -28,8 +28,19 @@ resources:
     cpu: 500m
     memory: 2Gi
 
-# arguments:
-# - blocksonly
+args:
+  - -printtoconsole
+  - -dbcache=500
+  - -maxconnections=60
+  - -maxuploadtarget=1000
+  - -blocksonly
+  - -disablewallet
+  - -server
+  - -listen
+  - -rpcbind=127.0.0.1
+  - -rpcallowip=0.0.0.0/0
+  - -rpcuser=test
+  - -rpcpassword=test
 
 nodeSelector: {}
 
