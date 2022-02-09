@@ -35,8 +35,8 @@ resources:
 
 bitcoin:
   net: -testnet
-  prune: {}
-  dbcache: -dbchache=500
+  prune: ""
+  dbcache: 500
 
 args:
   - -printtoconsole

@@ -22,7 +22,9 @@ spec:
           args:
             - {{ .Values.bitcoin.net }}
             - -dbchache={{ .Values.bitcoin.dbcache }}
+            {{- if .Values.bitcoin.prune -}}
             - {{ .Values.bitcoin.prune }}
+            {{- end -}}
             {{- range .Values.args }}
             - {{.}}
             {{- end }}
