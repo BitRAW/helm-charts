@@ -33,6 +33,7 @@ resources:
     memory: 2Gi
 
 args:
+  - -testnet
   - -printtoconsole
   - -dbcache=500
   - -maxconnections=60
