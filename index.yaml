@@ -3,6 +3,16 @@ entries:
   bitcoind:
   - apiVersion: v2
     appVersion: v22.0
+    created: "2022-02-09T09:02:32.642367212Z"
+    description: bitcoind node
+    digest: b8dbe1573ea256ae753e08be345e86fa6e7eebc880f5b3aa61b448b9e95c71d5
+    name: bitcoind
+    type: application
+    urls:
+    - https://github.com/BitRAW/helm-charts/releases/download/bitcoind-0.2.12/bitcoind-0.2.12.tgz
+    version: 0.2.12
+  - apiVersion: v2
+    appVersion: v22.0
     created: "2022-01-26T06:21:15.134136694Z"
     description: bitcoind node
     digest: 841a6c8499f4b8b3ab03d01d14a6b6802fc58b231ecb9d14a806674ac725832a
@@ -292,6 +302,17 @@ entries:
     urls:
     - https://github.com/BitRAW/helm-charts/releases/download/bitraw-bots-0.0.1/bitraw-bots-0.0.1.tgz
     version: 0.0.1
+  lnd:
+  - apiVersion: v2
+    appVersion: v0.14.2-beta
+    created: "2022-02-09T09:02:32.792013456Z"
+    description: lnd node
+    digest: b19eba323161948787bfc150a415ff3cffa9c2a9a24dcae7799157939ff80c56
+    name: lnd
+    type: application
+    urls:
+    - https://github.com/BitRAW/helm-charts/releases/download/lnd-0.0.1/lnd-0.0.1.tgz
+    version: 0.0.1
   uptime-kuma:
   - apiVersion: v2
     appVersion: 1.8.0
@@ -353,4 +374,4 @@ entries:
     urls:
     - charts/uptime-kuma-1.2.0.tgz
     version: 1.2.0
-generated: "2022-01-26T06:21:15.134637113Z"
+generated: "2022-02-09T09:02:32.79220149Z"
