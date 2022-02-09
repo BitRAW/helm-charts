@@ -21,7 +21,7 @@ spec:
           image: {{ .Values.image.name }}
           args:
             - {{ .Values.bitcoin.net }}
-            - -dbchache={{ .Values.bitcoin.dbcache }}
+            - -dbcache={{ .Values.bitcoin.dbcache }}
 
             {{- if .Values.bitcoin.prune -}}
             {{printf "\n" }}
