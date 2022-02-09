@@ -12,6 +12,10 @@ service:
   targetPort: 8333
   rpcPort: 8332
   rpcTargetPort: 8332
+  zmqTxPort: 28333
+  zmqTxTargetPort: 28333
+  zmqBlockPort: 28332
+  zmqBlockTargetPort: 28332
 
   
 

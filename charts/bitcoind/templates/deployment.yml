@@ -38,6 +38,8 @@ spec:
           ports:
             - containerPort: {{ .Values.service.port }}
             - containerPort: {{ .Values.service.rpcPort }}
+            - containerPort: {{ .Values.service.zmqBlockPort }}
+            - containerPort: {{ .Values.service.zmqTxPort }}
           volumeMounts:
             - mountPath: /bitcoin/.bitcoin
               name: storage
