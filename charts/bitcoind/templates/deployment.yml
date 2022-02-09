@@ -24,9 +24,10 @@ spec:
             - -dbchache={{ .Values.bitcoin.dbcache }}
 
             {{- if .Values.bitcoin.prune -}}
+            {{printf "\n" }}
             - {{ .Values.bitcoin.prune }}
             {{- end -}}
-            
+
             {{- range .Values.args }}
             - {{.}}
             {{- end }}
