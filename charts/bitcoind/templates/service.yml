@@ -17,11 +17,11 @@ spec:
     port: {{ .Values.service.rpcPort }}
     targetPort: {{ .Values.service.rpcTargetPort }}
     protocol: TCP  
-  - name: zmqTx
+  - name: zmqtx
     port: {{ .Values.service.zmqTxPort }}
     targetPort: {{ .Values.service.zmqTxTargetPort }}
     protocol: TCP
-  - name: zmqBlock
+  - name: zmqblock
     port: {{ .Values.service.zmqBlockPort }}
     targetPort: {{ .Values.service.zmqBlockTargetPort }}
     protocol: TCP

@@ -12,10 +12,7 @@ service:
   targetPort: 8333
   rpcPort: 8332
   rpcTargetPort: 8332
-  zmqTxPort: 28333
-  zmqTxTargetPort: 28333
-  zmqBlockPort: 28333
-  zmqBlockTargetPort: 28333
+
   
 
 ingress:
@@ -32,8 +29,11 @@ resources:
     cpu: 500m
     memory: 2Gi
 
+bitcoin:
+  net: -testnet
+
 args:
-  - -testnet
+  - {{ Values.bitcoin.net }}
   - -printtoconsole
   - -dbcache=500
   - -maxconnections=60
