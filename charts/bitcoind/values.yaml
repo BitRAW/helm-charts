@@ -33,7 +33,6 @@ bitcoin:
   net: -testnet
 
 args:
-  - {{ Values.bitcoin.net }}
   - -printtoconsole
   - -dbcache=500
   - -maxconnections=60
