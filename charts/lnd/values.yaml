@@ -28,13 +28,13 @@ resources:
 args:
 - --alias=bitRAW
 - --color=#D4A916
-- --tor.active=true
-- --tor.v3=true
+- --tor.active
+- --tor.v3
 - --listen=localhost
 - --sync-freelist=1
 - --stagger-initial-reconnect=1
 - --debuglevel=CNCT=info,CRTR=info,HSWC=info,NTFN=info,RPCS=info
-- --bitcoin.testnet=true
+- --bitcoin.testnet
 - --bitcoin.node=bitcoind
 - --bitcoind.rpcpass=test
 - --bitcoind.rpcuser=test
@@ -49,7 +49,7 @@ args:
 - --maxpendingchannels=10
 - --bitcoin.defaultchanconfs=2
 - --max-cltv-expiry=5000
-- --protocol.wumbo-channels=true
+- --protocol.wumbo-channels
 - --minchansize=500000
 - --routerrpc.apriorihopprob=0.5
 - --routerrpc.aprioriweight=0.75
@@ -59,8 +59,8 @@ args:
 - --routerrpc.minrtprob=0.005
 - --routerrpc.penaltyhalflife=6h0m0s
 - --rpclisten=0.0.0.0:10009
-- --tlsautorefresh=true
-- --tlsdisableautofill=true
+- --tlsautorefresh
+- --tlsdisableautofill
 
 
 nodeSelector: {}
