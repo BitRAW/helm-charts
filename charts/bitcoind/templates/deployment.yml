@@ -20,7 +20,7 @@ spec:
         - name: {{ .Values.app.name }}
           image: {{ .Values.image.name }}
           args:
-            {{ .Values.bitcoin.net }}
+            - {{ .Values.bitcoin.net }}
             {{- range .Values.args }}
             - {{.}}
             {{- end }}
