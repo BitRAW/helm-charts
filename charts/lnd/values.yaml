@@ -31,8 +31,8 @@ args:
 - --tor.active
 - --tor.v3
 - --listen=localhost
-- --sync-freelist=1
-- --stagger-initial-reconnect=1
+- --sync-freelist
+- --stagger-initial-reconnect
 - --debuglevel=CNCT=info,CRTR=info,HSWC=info,NTFN=info,RPCS=info
 - --bitcoin.testnet
 - --bitcoin.node=bitcoind
@@ -41,10 +41,10 @@ args:
 - --bitcoind.zmqpubrawblock=tcp://bitcoind-testnet-service:28332
 - --bitcoind.zmqpubrawtx=tcp://bitcoind-testnet-service:28333
 - --bitcoin.minhtlc=1
-- --ignore-historical-gossip-filters=1
+- --ignore-historical-gossip-filters
 - --bitcoin.feerate=1
 - --bitcoin.basefee=1000
-- --db.bolt.auto-compact=1
+- --db.bolt.auto-compact
 - --max-channel-fee-allocation=1.0
 - --maxpendingchannels=10
 - --bitcoin.defaultchanconfs=2
