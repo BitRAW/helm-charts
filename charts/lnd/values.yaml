@@ -26,43 +26,40 @@ resources:
     memory: 512Mi
 
 args:
-- --alias=bitRAW
-- --color=#D4A916
-- --tor.active
-- --tor.v3
-- --listen=localhost
-- --sync-freelist
-- --stagger-initial-reconnect
-- --debuglevel=CNCT=info,CRTR=info,HSWC=info,NTFN=info,RPCS=info
-- --bitcoin.active
-- --bitcoin.testnet
-- --bitcoin.node=bitcoind
-- --bitcoind.rpcpass=test
-- --bitcoind.rpcuser=test
-- --bitcoind.zmqpubrawblock=tcp://bitcoind-testnet-service:28332
-- --bitcoind.zmqpubrawtx=tcp://bitcoind-testnet-service:28333
-- --bitcoin.minhtlc=1
-- --ignore-historical-gossip-filters
-- --bitcoin.feerate=1
-- --bitcoin.basefee=1000
-- --db.bolt.auto-compact
-- --max-channel-fee-allocation=1.0
-- --maxpendingchannels=10
-- --bitcoin.defaultchanconfs=2
-- --max-cltv-expiry=5000
-- --protocol.wumbo-channels
-- --minchansize=500000
-- --routerrpc.apriorihopprob=0.5
-- --routerrpc.aprioriweight=0.75
-- --routerrpc.attemptcost=10
-- --routerrpc.attemptcostppm=10
-- --routerrpc.maxmchistory=10000
-- --routerrpc.minrtprob=0.005
-- --routerrpc.penaltyhalflife=6h0m0s
-- --bitcoind.rpchost=bitcoind-testnet-service:8332
-# - --rpclisten=0.0.0.0:10009
-# - --tlsautorefresh
-# - --tlsdisableautofill
+  - --alias=bitRAW
+  - --color=#D4A916
+  - --rpclisten=0.0.0.0
+  - --restlisten=0.0.0.0
+  - --listen=0.0.0.0
+  - --sync-freelist
+  - --stagger-initial-reconnect
+  - --debuglevel=CNCT=info,CRTR=info,HSWC=info,NTFN=info,RPCS=info
+  - --bitcoin.active
+  - --bitcoin.testnet
+  - --bitcoin.node=bitcoind
+  - --bitcoind.rpcpass=test
+  - --bitcoind.rpcuser=test
+  - --bitcoind.zmqpubrawblock=tcp://bitcoind-testnet-service:28332
+  - --bitcoind.zmqpubrawtx=tcp://bitcoind-testnet-service:28333
+  - --bitcoin.minhtlc=1
+  - --ignore-historical-gossip-filters
+  - --bitcoin.feerate=1
+  - --bitcoin.basefee=1000
+  - --db.bolt.auto-compact
+  - --max-channel-fee-allocation=1.0
+  - --maxpendingchannels=10
+  - --bitcoin.defaultchanconfs=2
+  - --max-cltv-expiry=5000
+  - --protocol.wumbo-channels
+  - --minchansize=500000
+  - --routerrpc.apriorihopprob=0.5
+  - --routerrpc.aprioriweight=0.75
+  - --routerrpc.attemptcost=10
+  - --routerrpc.attemptcostppm=10
+  - --routerrpc.maxmchistory=10000
+  - --routerrpc.minrtprob=0.005
+  - --routerrpc.penaltyhalflife=6h0m0s
+  - --bitcoind.rpchost=bitcoind-testnet-service:8332
 
 
 nodeSelector: {}

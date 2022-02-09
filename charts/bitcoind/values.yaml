@@ -49,8 +49,8 @@ args:
   - -rpcallowip=0.0.0.0/0
   - -rpcuser=test
   - -rpcpassword=test
-  - -zmqpubrawtx=tcp://127.0.0.1:28333
-  - -zmqpubrawblock=tcp://127.0.0.1:28332
+  - -zmqpubrawtx=tcp://0.0.0.0:28333
+  - -zmqpubrawblock=tcp://0.0.0.0:28332
 
 nodeSelector: {}
 
