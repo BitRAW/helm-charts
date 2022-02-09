@@ -7,7 +7,7 @@ image:
   pullPolicy: IfNotPresent
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 8333
   targetPort: 8333
   rpcPort: 8332
@@ -37,7 +37,7 @@ args:
   - -disablewallet
   - -server
   - -listen
-  - -rpcbind=127.0.0.1
+  - -rpcbind=0.0.0.0
   - -rpcallowip=0.0.0.0/0
   - -rpcuser=test
   - -rpcpassword=test
