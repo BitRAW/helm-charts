@@ -59,9 +59,10 @@ args:
 - --routerrpc.maxmchistory=10000
 - --routerrpc.minrtprob=0.005
 - --routerrpc.penaltyhalflife=6h0m0s
-- --rpclisten=0.0.0.0:10009
-- --tlsautorefresh
-- --tlsdisableautofill
+- --bitcoind.rpchost=bitcoind-testnet-service:8332
+# - --rpclisten=0.0.0.0:10009
+# - --tlsautorefresh
+# - --tlsdisableautofill
 
 
 nodeSelector: {}
