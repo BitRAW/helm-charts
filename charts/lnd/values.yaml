@@ -1,0 +1,70 @@
+
+app:
+  name: lnd
+
+image:
+  name: lightninglabs/lnd:v0.14.2-beta
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+  rpcPort: 10009
+  rpcTargetPort: 10009
+  
+
+storage:
+  size: 5Gi
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 300m
+    memory: 512Mi
+
+args:
+- --alias=bitRAW
+- --color=#D4A916
+- --tor.active=true
+- --tor.v3=true
+- --listen=localhost
+- --sync-freelist=1
+- --stagger-initial-reconnect=1
+- --debuglevel=CNCT=info,CRTR=info,HSWC=info,NTFN=info,RPCS=info
+- --bitcoin.testnet=true
+- --bitcoin.node=bitcoind
+- --bitcoind.rpcpass=test
+- --bitcoind.rpcuser=test
+- --bitcoind.zmqpubrawblock=tcp://bitcoind-testnet-service:28332
+- --bitcoind.zmqpubrawtx=tcp://bitcoind-testnet-service:28333
+- --bitcoin.minhtlc=1
+- --ignore-historical-gossip-filters=1
+- --bitcoin.feerate=1
+- --bitcoin.basefee=1000
+- --db.bolt.auto-compact=1
+- --max-channel-fee-allocation=1.0
+- --maxpendingchannels=10
+- --bitcoin.defaultchanconfs=2
+- --max-cltv-expiry=5000
+- --protocol.wumbo-channels=true
+- --minchansize=500000
+- --routerrpc.apriorihopprob=0.5
+- --routerrpc.aprioriweight=0.75
+- --routerrpc.attemptcost=10
+- --routerrpc.attemptcostppm=10
+- --routerrpc.maxmchistory=10000
+- --routerrpc.minrtprob=0.005
+- --routerrpc.penaltyhalflife=6h0m0s
+- --rpclisten=0.0.0.0:10009
+- --tlsautorefresh=true
+- --tlsdisableautofill=true
+
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
