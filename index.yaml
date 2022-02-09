@@ -3,6 +3,16 @@ entries:
   bitcoind:
   - apiVersion: v2
     appVersion: v22.0
+    created: "2022-02-09T09:36:03.012798301Z"
+    description: bitcoind node
+    digest: f865e8c7990c9acfe7da20471e730f72487530c5015d598455fa99a32b025c3a
+    name: bitcoind
+    type: application
+    urls:
+    - https://github.com/BitRAW/helm-charts/releases/download/bitcoind-0.2.16/bitcoind-0.2.16.tgz
+    version: 0.2.16
+  - apiVersion: v2
+    appVersion: v22.0
     created: "2022-02-09T09:33:08.021457772Z"
     description: bitcoind node
     digest: 1ee1fb92311e571ce1e9d5cadd233b8f0baed0db74ab4ba41f997fcec35feaca
@@ -394,4 +404,4 @@ entries:
     urls:
     - charts/uptime-kuma-1.2.0.tgz
     version: 1.2.0
-generated: "2022-02-09T09:33:08.021710904Z"
+generated: "2022-02-09T09:36:03.012998605Z"
