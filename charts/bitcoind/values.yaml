@@ -35,13 +35,13 @@ resources:
 
 bitcoin:
   net: -testnet
+  prune: {}
+  dbcache: -dbchache=500
 
 args:
   - -printtoconsole
-  - -dbcache=500
   - -maxconnections=60
   - -maxuploadtarget=1000
-  - -blocksonly
   - -disablewallet
   - -server
   - -listen

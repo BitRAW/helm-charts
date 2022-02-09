@@ -21,6 +21,8 @@ spec:
           image: {{ .Values.image.name }}
           args:
             - {{ .Values.bitcoin.net }}
+            - -dbchache={{ .Values.bitcoin.dbcache }}
+            - {{ .Values.bitcoin.prune }}
             {{- range .Values.args }}
             - {{.}}
             {{- end }}
