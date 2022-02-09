@@ -385,6 +385,16 @@ entries:
   lnd:
   - apiVersion: v2
     appVersion: v0.14.2-beta
+    created: "2022-02-09T11:33:39.806373079Z"
+    description: lnd node
+    digest: f39afd86a783b4da8cbed100563d57fc0ec9c8abe686f0f7207943ee4efcb81c
+    name: lnd
+    type: application
+    urls:
+    - https://github.com/BitRAW/helm-charts/releases/download/lnd-0.0.4/lnd-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    appVersion: v0.14.2-beta
     created: "2022-02-09T11:30:22.441733831Z"
     description: lnd node
     digest: 8472ac320d74f262d753dd65add367d81f783b8fd22a00d8e33c784a6c0f7dc2
@@ -474,4 +484,4 @@ entries:
     urls:
     - charts/uptime-kuma-1.2.0.tgz
     version: 1.2.0
-generated: "2022-02-09T11:30:22.441928933Z"
+generated: "2022-02-09T11:33:39.806534278Z"
