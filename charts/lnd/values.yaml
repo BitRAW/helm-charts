@@ -34,6 +34,7 @@ args:
 - --sync-freelist
 - --stagger-initial-reconnect
 - --debuglevel=CNCT=info,CRTR=info,HSWC=info,NTFN=info,RPCS=info
+- --bitcoin.active
 - --bitcoin.testnet
 - --bitcoin.node=bitcoind
 - --bitcoind.rpcpass=test
