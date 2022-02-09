@@ -12,8 +12,10 @@ service:
   targetPort: 8333
   rpcPort: 8332
   rpcTargetPort: 8332
-  zmqPort: 28333
-  zmqTargetPort: 28333
+  zmqTxPort: 28333
+  zmqTxTargetPort: 28333
+  zmqBlockPort: 28333
+  zmqBlockTargetPort: 28333
   
 
 ingress:
@@ -43,7 +45,8 @@ args:
   - -rpcallowip=0.0.0.0/0
   - -rpcuser=test
   - -rpcpassword=test
-  - -zmqpubhashblock="tcp://[::1]:28333"
+  - -zmqpubrawtx=tcp://127.0.0.1:28333
+  - -zmqpubrawblock=tcp://127.0.0.1:28332
 
 nodeSelector: {}
 
