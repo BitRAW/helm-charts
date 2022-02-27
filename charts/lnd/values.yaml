@@ -12,6 +12,9 @@ service:
   targetPort: 8080
   rpcPort: 10009
   rpcTargetPort: 10009
+  connectPort: 9735
+  connectTargetPort: 9735
+
   
 
 storage:
