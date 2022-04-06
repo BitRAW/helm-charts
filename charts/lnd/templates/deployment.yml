@@ -20,10 +20,16 @@ spec:
         - name: {{ .Values.app.name }}
           image: {{ .Values.image.name }}
           args:
+            - --bitcoin.{{ .Values.app.network }}
+            - --bitcoind.zmqpubrawblock=tcp://{{ .Values.app.btcRpcHostName }}:28332
+            - --bitcoind.zmqpubrawtx=tcp://{{ .Values.app.btcRpcHostName }}:28333
+            - --bitcoind.rpchost={{ .Values.app.btcRpcHostName }}:8332
+            - --externalip={{ .Values.app.externalIP }}
+            - --tlsextradomain={{ .Values.app.name }}-service
+            - --wallet-unlock-password-file=/tmp/pass/wallet
             {{- range .Values.args }}
             - {{.}}
             {{- end }}
-                       # - -rpcauth=commodity_manager:ce2f62c4d5caeb71fac604efa4fcc472$ae97fbf4b95e93522414bab58b1b61c811675f10c9ee1b58b8f3b36fecaabc2b
           resources:
             requests:
               cpu: {{ .Values.resources.requests.cpu }}
@@ -38,7 +44,16 @@ spec:
           volumeMounts:
             - mountPath: /root/.lnd
               name: storage
+            - mountPath: /tmp/pass
+              name: lnpw
+              readOnly: true
       volumes:
         - name: storage
           persistentVolumeClaim:
             claimName: {{ .Values.app.name }}-pvc
+        - name: lnpw
+          secret:
+            secretName: {{ .Values.credential.lnpwSecretName }}
+            items:
+            - key: WALLET_PASS
+              path: wallet

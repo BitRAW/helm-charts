@@ -1,6 +1,12 @@
 
 app:
-  name: lnd
+  name: lnd-testnet
+  network: testnet
+  externalIP: "35.224.133.52"
+  btcRpcHostName: bitcoind-testnet-service
+
+credential:
+  lnpwSecretName: lnd-testnet-wallet-secret
 
 image:
   name: lightninglabs/lnd:v0.14.2-beta
@@ -29,7 +35,7 @@ resources:
     memory: 512Mi
 
 args:
-  - --alias=bitRAW
+  - --alias=BitRAW.io
   - --color=#D4A916
   - --rpclisten=0.0.0.0
   - --restlisten=0.0.0.0
@@ -38,12 +44,9 @@ args:
   - --stagger-initial-reconnect
   - --debuglevel=CNCT=info,CRTR=info,HSWC=info,NTFN=info,RPCS=info
   - --bitcoin.active
-  - --bitcoin.testnet
   - --bitcoin.node=bitcoind
   - --bitcoind.rpcpass=test
   - --bitcoind.rpcuser=test
-  - --bitcoind.zmqpubrawblock=tcp://bitcoind-testnet-service:28332
-  - --bitcoind.zmqpubrawtx=tcp://bitcoind-testnet-service:28333
   - --bitcoin.minhtlc=1
   - --ignore-historical-gossip-filters
   - --bitcoin.feerate=1
@@ -62,8 +65,6 @@ args:
   - --routerrpc.maxmchistory=10000
   - --routerrpc.minrtprob=0.005
   - --routerrpc.penaltyhalflife=6h0m0s
-  - --bitcoind.rpchost=bitcoind-testnet-service:8332
-
 
 nodeSelector: {}
 

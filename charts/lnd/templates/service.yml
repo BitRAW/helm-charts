@@ -9,10 +9,6 @@ spec:
     app: {{ .Values.app.name }}
   type: {{ .Values.service.type }}
   ports:  
-  - name: rest
-    port: {{ .Values.service.port }}
-    targetPort: {{ .Values.service.targetPort }}
-    protocol: TCP
   - name: grpc
     port: {{ .Values.service.rpcPort }}
     targetPort: {{ .Values.service.rpcTargetPort }}
